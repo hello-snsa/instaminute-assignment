@@ -13,7 +13,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../')));
 
 const botName = 'chatBot';
 
@@ -23,7 +23,7 @@ io.on('connection', socket => {
 
         socket.join(user.room);
 
-        socket.emit('message', formatMessage(botName, 'Welcome to instaminute chatroom '));
+        socket.emit('message', formatMessage(botName, 'Welcome to instaminutes chatroom '));
         //user Joined
         socket.broadcast
             .to(user.room)

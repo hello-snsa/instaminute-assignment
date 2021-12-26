@@ -79,6 +79,6 @@ const outputUsers = (users) => {
 document.getElementById('leave').addEventListener('click', () => {
     const leaveRoom = confirm('You will out from this room. Please confirm.');
     if (leaveRoom) {
-        window.location = '../index.html';
+        window.location = '../../../index.html';
     }
 });
