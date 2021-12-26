@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instaminutes assignment</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="mainDiv">
+    <header class="chatBoxContainer">
+      <img src="https://instaminutes.com/logo.svg" alt="logo" />
+      <a id="leave" class="btn">Leave Room</a>
+    </header>
+    <main class="chatMainContainer">
+      <div class="leftSide">
+        <h3><i class="fas comments"></i> Room Name:</h3>
+        <h2 id="roomName"></h2>
+        <h3><i class="fas user"></i> Users</h3>
+        <ul id="users"></ul>
+      </div>
+      <div class="msgs"></div>
+    </main>
+    <div class="chatBox">
+      <form id="chatForm">
+        <input id="msg" type="text" placeholder="Enter Message" required autocomplete="off" />
+        <button class="btn"><i class="fas chatArea"></i> Send</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.2/qs.min.js"
+    integrity="sha512-ErYZLDi4WRoox2JhOIADWBydTRhMJ0KIXnv5C1GvuY8YooLGapnebaM3iRGhwS6/E9ONXj0MRXp6bhu73sdFkg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="../js/main.js"></script>
+
+
+
+
+
+
+</body>
+
+</html>
