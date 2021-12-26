@@ -1,36 +1,36 @@
 const users = [];
 
-// adding user
-function userJoin(id, username, room) {
-    const user = { id, username, room };
+// adding user to chat room
+const userJoin = (id, username, rooms) => {
+    let user = { id, username, rooms };
 
     users.push(user);
 
     return user;
 }
 
-// getting current user
-function getCurrentUser(id) {
+// getting current user details
+const getCurrentUser = (id) => {
     return users.find(user => user.id === id);
 }
 
-// removing user
-function userLeft(id) {
-    const index = users.findIndex(user => user.id === id);
+//removing user from chat room
+const userLeft = (id) => {
+    let index = users.findIndex(user => user.id === id);
 
     if (index !== -1) {
         return users.splice(index, 1)[0];
     }
 }
 
-// Get all user
-function getRoomUsers(room) {
-    return users.filter(user => user.room === room);
+// getting all users in room
+const getRoomUsers = (rooms) => {
+    return users.filter(user => user.rooms === rooms);
 }
 
-module.exports = { userJoin, getCurrentUser, userLeft, getRoomUsers };
-
-
-
-
-
+module.exports = {
+    userJoin,
+    getCurrentUser,
+    userLeft,
+    getRoomUsers
+};
